@@ -5,11 +5,11 @@ ECHO -------------------------------------------------
 
 :: This script is supposed to reside in the youtube-dl folder.
 ::
-::					Videos\ ---------
-::						|			|
+::					Videos\ ----------------------------------
+::						|                                |
 ::						|			SpongeBobSquarePantsTheMovie\
-::					youtube-dl\ -------------
-::						|					|
+::					youtube-dl\ --------------------
+::                                                                     |
 ::					getTrailer.bat		youtube-dl.exe
 
 
