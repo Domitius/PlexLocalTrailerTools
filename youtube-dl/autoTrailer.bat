@@ -4,22 +4,22 @@ set mytime=%time%
 ECHO RUNNING PLEX LOCAL TRAILER DOWNLOAD ON %mydate%  :   %mytime% 
 ECHO DOWNLOADING...
 ECHO ----------------------------------------------
-for /d %%i in ("C:\Users\John Doe\Desktop\sandboxTest\*") do (
+for /d %%i in ("C:\Users\John Doe\Videos\*") do (
 	:: Go into movie folder
-    CD "%%i"
+    	CD "%%i"
 	if not exist Trailers (
-        :: move back to the youtube folder with youtube-dl
+        	:: move back to the youtube folder with youtube-dl
 		CD "..\youtube-dl"
-        ECHO.
-        ECHO -------------------------------------------------------
-        ECHO Downloading %%~NXi Trailer
-        ECHO -------------------------------------------------------
-        ECHO.
-        :: Download first YouTube result from <movie folder title> Trailer
+		ECHO.
+		ECHO -------------------------------------------------------
+		ECHO Downloading %%~NXi Trailer
+		ECHO -------------------------------------------------------
+		ECHO.
+		:: Download first YouTube result from <movie folder title> Trailer
 		".\youtube-dl.exe" "ytsearch1:%%~NXi Trailer"
-        :: Make Trailers folder for the movie folder
+		:: Make Trailers folder for the movie folder
 		MKDIR "%%i\Trailers"
-        :: Move freshly downloaded trailer into new Trailers folder
+		:: Move freshly downloaded trailer into new Trailers folder
 		MOVE "*.mp4" "%%i\Trailers\Theater Trailer #1.mp4"
 	)	
 )
