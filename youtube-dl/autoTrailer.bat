@@ -21,7 +21,8 @@ for /d %%i in ("C:\Users\John Doe\Videos\*") do (
 		MKDIR "%%i\Trailers"
 		:: Move freshly downloaded trailer into new Trailers folder
 		MOVE "*.mp4" "%%i\Trailers\Theater Trailer #1.mp4"
-	)	
+	)
+	CD "..\youtube-dl"
 )
 ECHO.
 ECHO FINISHED DOWNLOADING LOCAL PLEX TRAILERS
